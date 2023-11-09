@@ -1,0 +1,48 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can find for you the weather forecast for a place and a date."],
+         "context": [""]
+        },
+        {"tag": "global_question",
+         "patterns": ["What is the weather like?", "What is the weather?", "Is the sun shining?", "Is it raining?", "Is it hot outside?", "Is it cold outside" ],
+         "responses": ["For which location are you looking for the weather"],
+         "context": [""]
+        },
+        {"tag": "location_search",
+         "patterns": ["I would like the forecast for", "Please give me the weather forecast for", "What is the weather at", "What is the weather in", "Will I experience any rain or snow" ],
+         "responses": ["The weather for <date> at the location <location> is <weather>"],
+         "context": ["date_search"]
+        },
+        {"tag": "date_search",
+         "patterns": ["today", "tomorrow", "next days", "2023/08/21", "21.08.2023", "from 2023/08/21 til 2023/08/25", "from 2023/08/21 until 2023/08/25", "from 21.08.2023 til 25.08.2023", "from 21.08.2023 until 25.08.2023" ],
+         "responses": ["Looking for weather"],
+         "context": ["number_search"]
+        },
+        {"tag": "number_search",
+         "patterns": ["next day", "two days", "three days", "four days", "this week", "next week", "next two weeks" ],
+         "responses": ["Looking for a forecast"],
+         "context": [""]
+        }
+   ]
+}
